@@ -1,0 +1,117 @@
+<MyApp>
+    id:calculator
+    display:entry
+
+    GridLayout:
+        cols:1
+
+
+        size:root.width,root.height
+        TextInput:
+            id:entry
+            multiline:False
+
+        GridLayout:
+            cols:4
+            rows:4
+            Button:
+                text:"1"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.8"}
+                on_press:entry.text+=self.text
+
+            Button:
+                text:"2"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.6"}
+                on_press:entry.text+=self.text
+            Button:
+                text:"3"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.4"}
+                on_press:entry.text+=self.text
+            Button:
+                text:"+"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.3"}
+                on_press:entry.text+=self.text
+
+            Button:
+                text:"4"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.8"}
+                on_press:entry.text+=self.text
+            Button:
+                text:"5"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.6"}
+                on_press:entry.text+=self.text
+
+            Button:
+                text:"6"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.4"}
+                on_press:entry.text+=self.text
+            Button:
+                text:"-"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.3"}
+                on_press:entry.text+=self.text
+            Button:
+                text:"7"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.8"}
+                on_press:entry.text+=self.text
+            Button:
+                text:"8"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.6"}
+                on_press:entry.text+=self.text
+
+            Button:
+                text:"9"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.4"}
+                on_press:entry.text+=self.text
+            Button:
+                text:"*"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.3"}
+                on_press:entry.text+=self.text
+
+            Button:
+                text:"."
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.8"}
+                on_press:entry.text+=self.text
+            Button:
+                text:"0"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.6"}
+                on_press:entry.text+=self.text
+
+            Button:
+                text:"%"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.4"}
+                on_press:entry.text+=self.text
+            Button:
+                text:"/"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.3"}
+                on_press:entry.text+=self.text
+
+
+
+        GridLayout:
+            cols:2
+            Button:
+                text:"Ac"
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.3"}
+                on_press:entry.text=" "
+            Button:
+                text:"="
+                size:root.width,root.height
+                pos_hint:{"x":"0.5","top":"0.3"}
+                on_press:calculator.calculate(entry.text)
